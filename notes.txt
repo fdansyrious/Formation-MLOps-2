@@ -1,0 +1,45 @@
+Lundi.
+- Intégration continue: à faire dans le
+dev > recette > prod.
+
+CI : Code & Test
+CD : continuous delivery : nouveau code = nouvelle release non déployées sur un env. Le déploiement est fait à la main
+CD : continuous deployment: nouveau code = nouvelle release => déploiement automatique
+
+pyramide de test : unit test < integration test < test fonctionnel
+
+?artifactory
+
+Continuous Training > CD > CI. Le CT nécessite un failgate
+
+Questions: 
+[cycle de ré-entraînement] Déclenchement du training par une modification de la donnée
+[Test de la cohérence du modèle]
+sonar
+bonne pratique ? faut-il mocker les services? ou vrais appels? outil pour monitorer le coverage des tests (éviter le déploiement si seuil pas atteint)
+est-on obligé 
+
+
+
+Bonne pratique: séparer les requirements. Selon la fonctionnalité.
+*requirements :
+- propre à ton module
+- requirements liés au test
+- dépendances (req.dev) permettant de développer
+
+*sur les tests
+- lorsqu'on a un bug (peut-être un cas dégénéré qu'on avait pas prévu) écrire un test unitaire associé à ce bug. Pour documenter le bug.
+- prioriser les tests par rapport à là où sont les limites (mauvaise qualité de la donnée, modèle instable)
+- la pyramide est une check-list
+- format test end-to-end given...when...then
+- les tests fonctionnels sont à exécuter en dernier. On met les tests du moins coûteux au plus coûteux
+- test d'integration = test d'un usecase. exemple: feature_engineering.
+- tp 2 : on teste juste le fait que le modèle puisse être déclenché par la disponibilité d'un fichier. Dans ce cas là, on peut mocker le training ou faire le training d'un modèle dégradé.
+Dans ce cas, le train est fait dans la CI.
+- test doit être idempotent.
+
+Cloud provider FR:
+OVHcloud
+Scalingo
+Scaleway
+DSS outscale
