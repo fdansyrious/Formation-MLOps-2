@@ -12,3 +12,4 @@ def get_data_from_csv(train_data_path: str, data_folder: str) -> None:
     new_data = pd.concat([random_line_1, random_line_2], ignore_index=True)
     new_data.to_csv(os.path.join(data_folder, str(datetime.datetime.now()) + '.csv'), index=False, sep=";")
     new_data.to_csv(os.path.join(data_folder, 'latest.csv'), index=False, sep=";")
+    return os.path.join(data_folder, 'latest.csv')

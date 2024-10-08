@@ -61,6 +61,15 @@ il est possible de tester (mettre des tests sur terraform & ansible)
 - deployer un contexte 
 Option 1: déployer un airflow au niveau de l'entreprise, puis faire des tâches qui contenerise le code du projet avec son env. dédié.
 - Option 2: d'avoir un airflow au niveau du projet. donc un airflow & UI par projet et un scheduler par projet.
+- delta-table, à lire
+
+- La modification du code est directement pris en compte dans la UI du moment où le code a été changé dans le répertoire des DAGS. Pas besoin d'attendre la CI. [dans le cadre du TP]
+-> sinon, on intègre dans la CI une étape de déploiement des DAGs qui n'est ni plus, ni moins qu'une copie des scripts dans le directory des DAGs.
+
+? airflow worker
+
+- joblib > pickle pour enregistrer les modèles.
+
 
 Cloud provider FR:
 OVHcloud
