@@ -27,8 +27,8 @@ def predict():
     # predict = PythonOperator()
     # End completing predict task
     @task
-    def predict_with_io_task(features_path: str):
-        predict_with_io(features_path=features_path, model_path=MODEL_PATH, predictions_folder=PREDICTIONS_FOLDER)
+    def predict_with_io_task(feature_path: str):
+        predict_with_io(features_path=feature_path, model_path=MODEL_PATH, predictions_folder=PREDICTIONS_FOLDER)
         
         
 
