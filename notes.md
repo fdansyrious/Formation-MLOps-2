@@ -73,8 +73,15 @@ Option 1: déployer un airflow au niveau de l'entreprise, puis faire des tâches
 experiments = group de models. Best practice : group them by subjects
 models = pointeurs to the experimented model
 
-ps aux | grep mlflown #get ports
-mlflow.set_tracking_uri("https://0.0.0.0:52473)
+ps aux | grep mlflow #get mlflow ports
+mlflow.set_tracking_uri("https://0.0.0.0:)
+
+existence de metrics system dans MLFlow à activer au moment du run pour récupérer les charges de CPU
+La partie Artifcats du run loggue des artefacts .
+experiment = model registry et onglets models est un pointer vers une expérience particulière?
+Now possible d'avoir des traces de LLMs sur MLFlow. Il présentera sous forme de diagramme de Gant avec les input et output, les appels entre services de l'application LLMs pour comprendre où ça a commencé à diverger et quelles sont les imbrications.
+
+- promote model: permet la promotion des modèles en copiant un registred model dans un autre. exple model_r_dev vers model_r_prod
 
 --port 52473
 
