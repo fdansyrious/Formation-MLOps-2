@@ -95,6 +95,7 @@ SLO>SLA
 --port 5247
 - sonde surveille l'état de ton application/de ton système. c'est comme un kpi ou indicateur à suivre.
 - lorsqu'une sonde dévie, il faudra pouvoir investiguer en utilisant les 3 piliers (métriques, logs, et traces)
+- EFK ou ELK
 
 Cloud provider FR:
 OVHcloud
